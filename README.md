@@ -6,3 +6,6 @@ Making Home and About pages
 Deploy to production using Heroku - production hosting service
 
 Backend - tables and migration
+
+Article model - communicating with created table
+Create,Read,Update,Delete
