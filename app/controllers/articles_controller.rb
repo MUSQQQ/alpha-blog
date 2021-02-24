@@ -5,4 +5,9 @@ class ArticlesController < ApplicationController
         #byebug
         @article = Article.find(params[:id]) #przypisuje zmiennej article o danym id(wprowadzonym w przegladarce)
     end
+
+    def index
+        @articles = Article.all
+    end
+
 end
