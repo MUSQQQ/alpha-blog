@@ -16,3 +16,5 @@ Building browser article creation form
 Saving newly created articles
 Messages: validation and flash messages
 Editing, updating adn deletind articles
+Adding links to previously made CRUD operations so they are available without typing adresses
+Making user interface / layout links
