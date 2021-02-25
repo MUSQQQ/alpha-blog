@@ -11,11 +11,20 @@ class ArticlesController < ApplicationController
     end
 
     def new
-
+        if !@article.presence   #moja wlasna wersja. Niby dziala bez if ale z ifem jest pewnosc ze @article nie bedzie nadpisywany
+        @article = Article.new
+        end
     end
 
     def create
-        #render plain: params[:article]
+        @article = Article.new(params.require(:article).permit(:title, :description))
+        if @article.save
+            flash[:notice] = "article was created succesfully"
+            redirect_to article_path(@article)
+        else
+            render 'new'
+        end
+        #render plain: @article.inspect
     end
 
 
