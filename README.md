@@ -22,3 +22,5 @@ Refactoring and partials
 Front-end (Bootstrap)
 Installing bootstrap + hnadling css and jsc by rails 6
 Building a homepage bootstrap themes, styling, navbar, jumbotron, sticky footer
+Layout links using bootstrap classes
+Styling articles index page
