@@ -1,0 +1,54 @@
+@import '/bootstrap/dist/css/bootstrap';
+.navbar{
+    background-color: #6200b3 !important;
+
+}
+.btn{
+    color: #ffffff !important;
+    background-color: #6200b3 !important;
+    outline-color: #ffffff !important;
+    border-color: #ffffff;
+}
+.nav-link{
+    color: #ffffff !important;
+}
+
+.navbar-brand{
+    color: #ffffff !important;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+#home-container{
+    margin-top: 30px;
+}
+
+.jumbotron{
+    background-image: asset-url('darkness-copy.jpg');
+    background-position: center-center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 430px;
+    
+}
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: #dbdbdb27;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+  position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #6200b3;
+    text-decoration-color: #ffffff;
+}
+
+
