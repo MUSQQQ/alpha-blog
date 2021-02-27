@@ -26,3 +26,5 @@ Layout links using bootstrap classes
 Styling articles index page
 More styling (article creation page)
 Styling validation and flash messages
+Styling article show page
+Cleaning up the layout and deploying to production
