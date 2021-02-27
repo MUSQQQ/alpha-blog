@@ -24,3 +24,5 @@ Installing bootstrap + hnadling css and jsc by rails 6
 Building a homepage bootstrap themes, styling, navbar, jumbotron, sticky footer
 Layout links using bootstrap classes
 Styling articles index page
+More styling (article creation page)
+Styling validation and flash messages

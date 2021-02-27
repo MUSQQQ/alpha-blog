@@ -3,12 +3,24 @@
     background-color: #6200b3 !important;
 
 }
-.btn{
+
+.btn:link{
     color: #ffffff !important;
     background-color: #6200b3 !important;
     outline-color: #ffffff !important;
     border-color: #ffffff !important;
     
+}
+.btn2{
+    color: #ffffff !important;
+    background-color: #6200b3 !important;
+    outline-color: #ffffff !important;
+    border-color: #ffffff !important;
+    
+}
+
+.btn:hover{
+    border: show;
 }
 .nav-link{
     color: #ffffff !important;
@@ -56,11 +68,16 @@ body {
     color: #6200b3 !important;
 }
 
-.btn-art{
-    
+.index-links{
     margin: 7px;
-    border-style: groove;
-    border-width: 3px;
-    border-radius: 5px;
-    padding: 5px;
+    
+    border: 2px groove #6200b3;
+    
+    background-color:  #ffffff;
+    outline-style: round;
+    outline-color: #6200b3;
+    outline-width: 5px;
+    color: #000000;
+    
 }
+
