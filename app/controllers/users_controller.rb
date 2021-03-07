@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
     before_action :set_user, only: [:show, :edit, :update]
-    
+    before_action :require_user, only: [:sedit, :action]
+    before_action :require_correct_user, only: [:edit, :update]
     def new
         @user=User.new
     end
@@ -46,5 +47,12 @@ class UsersController < ApplicationController
 
     def set_user
         @user=User.find(params[:id])
+    end
+
+    def require_correct_user
+        if current_user != @user
+            flash[:alert] = "You can't do that"
+            redirect_to @user
+        end
     end
 end

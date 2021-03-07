@@ -1,11 +1,10 @@
 class ArticlesController < ApplicationController
+    # before_action automatically performs chosen method before specified methods
     before_action :set_article, only: [:show, :edit, :update, :destroy]
-    # dla wybranych metod wywoluje przed ich rozpoczeciem wskazana metode
-
+    before_action :require_user, except: [:show, :index]
+    before_action :require_correct_user, only: [:edit, :update, :destroy]
     def show
-        #instance variable down below
-        #byebug
-         #przypisuje zmiennej article o danym id(wprowadzonym w przegladarce)
+        
     end
 
     def index
@@ -13,7 +12,7 @@ class ArticlesController < ApplicationController
     end
 
     def new
-        if !@article.presence   #moja wlasna wersja. Niby dziala bez if ale z ifem jest pewnosc ze @article nie bedzie nadpisywany
+        if !@article.presence   #my own version to be sure that @article isnt getting overwritten
         @article = Article.new
         end
     end
@@ -60,4 +59,10 @@ class ArticlesController < ApplicationController
         params.require(:article).permit(:title, :description)
     end
 
+    def require_correct_user
+        if current_user != @article.user
+            flash[:alert] = "You can't do that"
+            redirect_to @article
+        end
+    end
 end
