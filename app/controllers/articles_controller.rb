@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
     end
 
     def index
-        @articles = Article.all
+        @articles = Article.paginate(page: params[:page], per_page: 5) #in place of "Article.all" to use pagination feature added with pagination gemfile
     end
 
     def new

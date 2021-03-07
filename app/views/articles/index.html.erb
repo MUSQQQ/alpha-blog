@@ -1,5 +1,11 @@
 <div id="page-content">
 <h1 class="text-center mt-4">Articles listing page</h1>
 
+<!-- allows pagination -->
+<div class="apple_pagination">
+     <%= will_paginate @articles, :container => false %>
+</div>
 <%= render 'article' %>
-
+<div class="apple_pagination mb-4">
+     <%= will_paginate @articles, :container => false %>
+</div>
