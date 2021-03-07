@@ -1,0 +1,37 @@
+<div id="page-content">
+<h1 class="text-center mt-4">Log in</h1>
+
+<div class="container" id="edittt">
+
+
+
+
+<%= form_with(scope: :session, url: login_path, class: "shadow-lg p-4 mb-3 bg-#6200b3 rounded", local: true) do |f| %>
+
+
+    <div class="form-group row">
+        <%= f.label :email, class: "col-2 col-form-label font-weight-bold" %>
+        <div class="col-10">
+        <%= f.email_field :email, class: "form-control shadow rounded", placeholder: "123@xyz.com" %>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <%= f.label :password, class: "col-2 col-form-label font-weight-bold" %>
+        <div class="col-10">
+        <%= f.password_field :password, class: "form-control shadow rounded", placeholder: "***" %>
+        </div>
+    </div>
+
+    <div class="form-group row justify-content-center">
+        <%= f.submit "Log in", class: "btn btn-outline-dark btn-lg"%>
+    </div>
+<% end %>
+<p class="row justify-content-center mb-3">
+<%= link_to '[ Cancel and return to articles listings ]', articles_path(), class: "text-dark" %>
+</p>
+
+</div>
+
+
+</div>
