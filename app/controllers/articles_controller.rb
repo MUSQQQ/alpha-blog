@@ -56,7 +56,7 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-        params.require(:article).permit(:title, :description)
+        params.require(:article).permit(:title, :description, category_ids: []) #whitelist an array of categories that are associated with specific article
     end
 
     def require_correct_user
