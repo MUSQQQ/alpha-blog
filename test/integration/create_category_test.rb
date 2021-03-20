@@ -12,4 +12,15 @@ class CreateCategoryTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_match "Sports", response.body  # looking for "search" name in html body
   end
+
+  test "get new category form and reject invalid category submission" do
+    get "/categories/new"
+    assert_response :success
+    assert_no_difference 'Category.count' do
+      post categories_path, params: { category: { name: "" } }  #if new category is nil (name is not present)
+    end
+    assert_match "errors", response.body  # looking for "search" name in html body
+    assert_select 'div.alert' #checking ofr presence of these two classes cause we know they only exist in _errors partial
+    assert_select 'h4.alert-heading'
+  end
 end
