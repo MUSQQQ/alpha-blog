@@ -1,2 +1,12 @@
 <div id="page-content">
 <h1 class="text-center mt-4">Category: <%= @category.name %></h1>
+
+<% if logged_in? && current_user.admin? %>
+     <div class="text-center mt-4"><%= link_to "Edit category", edit_category_path(@category), class: "btn btn-outline-info" %></div>
+<% end %>
+
+<div class="apple_pagination mb-2">
+     <%= will_paginate @articles, :container => false %>
+</div>
+<h2 class="text-center mt-4">Articles</h2>
+<%= render 'articles/article' %>
