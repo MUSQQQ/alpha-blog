@@ -6,6 +6,10 @@
         <div class="card-header font-italic">
             <% if article.user %>
             by <%=link_to article.user.username, user_path(article.user) %>
+            <% if article.categories.any? %>
+                <br/>
+                <div class ="mt-2"><%= render article.categories %></div>  <!-- _category partial in categories folder is ndeeded -->
+            <% end %>
             <% end %>
         </div>
         <div class="card-body">
